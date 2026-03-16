@@ -1,5 +1,5 @@
 # Ex08 CAMU Schedule using Bootstrap
-## Date:
+## Date:11/03/2026
 
 ## AIM:
 To design a responsive and visually appealing CAMU Schedule using Bootstrap.
@@ -30,9 +30,216 @@ Add a header/footer displaying copyright information.
 Publish the website in the LocalHost.
 
 ## PROGRAM :
+camu.html
+```
+{% load static %}
 
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Camu Timetable</title>
+
+<!-- Bootstrap CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:Segoe UI;
+background:#f5f6f8;
+}
+
+.header{
+background:#ffffff;
+padding:15px 30px;
+font-size:20px;
+font-weight:600;
+border-bottom:1px solid #ddd;
+}
+
+.container{
+display:flex;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:240px;
+background:white;
+border-right:1px solid #ddd;
+}
+
+.logo{
+text-align:center;
+padding:20px;
+border-bottom:1px solid #eee;
+}
+
+.logo img{
+width:150px;
+}
+
+.menu a{
+display:block;
+padding:12px 25px;
+text-decoration:none;
+color:#555;
+}
+
+.menu a.active{
+border:1px solid #2fa4d7;
+border-radius:6px;
+margin:5px 15px;
+color:#2fa4d7;
+}
+
+/* MAIN */
+
+.main{
+flex:1;
+padding:25px;
+}
+
+.toprow{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.weekly{
+background:#f1f1f1;
+padding:8px 16px;
+border-radius:20px;
+}
+
+.semester{
+font-weight:600;
+}
+
+.datebar{
+text-align:center;
+font-size:22px;
+margin:20px 0;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+Saveetha Engineering College (Autonomous)
+</div>
+
+<div class="container">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<div class="logo">
+<img src="{% static 'logo.png' %}">
+</div>
+
+<div class="menu">
+<a href="#">Reports</a>
+<a href="#">Progress report</a>
+<a href="#">Assessments</a>
+<a href="#">Holidays</a>
+<a class="active" href="#">Timetable</a>
+<a href="#">Teaching content</a>
+<a href="#">Leave</a>
+<a href="#">Services</a>
+</div>
+
+</div>
+
+<!-- MAIN CONTENT -->
+
+<div class="main">
+
+<div class="toprow">
+<div class="semester">EVEN | 2025-2026</div>
+<div class="weekly">Weekly schedule</div>
+</div>
+
+<div class="datebar">
+< 16 Mar 2026 >
+</div>
+
+<!-- TIMETABLE TABLE -->
+
+<table class="table table-bordered table-striped">
+
+<thead class="table-primary">
+
+<tr>
+<th>Subject</th>
+<th>Time</th>
+<th>Faculty</th>
+<th>Room</th>
+<th>Status</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>Fundamentals of Web Application Development</td>
+<td>10:00 AM - 11:00 AM</td>
+<td>VIJAYAN P</td>
+<td>5452</td>
+<td>Attendance recorded</td>
+</tr>
+
+<tr>
+<td>Fundamentals of Web Application Development</td>
+<td>11:00 AM - 12:00 PM</td>
+<td>VIJAYAN P</td>
+<td>5452</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>Machine Learning</td>
+<td>1:00 PM - 2:00 PM</td>
+<td>ARUN K</td>
+<td>5403</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>Artificial Intelligence</td>
+<td>2:00 PM - 3:00 PM</td>
+<td>PRIYA S</td>
+<td>5401</td>
+<td>-</td>
+</tr>
+
+</tbody>
+
+</table>
+
+<!-- FOOTER -->
+
+<footer class="text-center mt-4">
+© 2026 Saveetha Engineering College
+</footer>
+
+</div>
+
+</div>
+
+</body>
+</html>
+```
 
 ## OUTPUT:
+![](<timetableproject/Screenshot 2026-03-16 170233.png>)
 
 
 ## RESULT:
