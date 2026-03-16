@@ -238,8 +238,9 @@ Saveetha Engineering College (Autonomous)
 </html>
 ```
 
-## OUTPUT:
+## OUTPUT
 
+![CAMU Schedule Output](Screenshot%202026-03-16%20170233.png)
 
 
 ## RESULT:
